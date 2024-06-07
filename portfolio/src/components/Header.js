@@ -34,15 +34,14 @@ const socials = [
 
 function Navigation(props) {
   const navList = props.data.map(navItem =>
-    <li><a href={navItem.url} target="_blank"><FontAwesomeIcon icon={navItem.icon} size="2x" /></a></li>
+    <li class="navIcons">
+      <a href={navItem.url} target="_blank">
+        <FontAwesomeIcon icon={navItem.icon} size="2x" />
+      </a>
+    </li>
   );
   return <ul><HStack spacing={9} style={{listStyle: "none"}}>{navList}</HStack></ul>
 }
-
-
-
-
-// console.log(navList)
 
 
 const Header = () => {
@@ -56,13 +55,6 @@ const Header = () => {
       });
     }
   };
-
-  // const listItems = people.map(person =>
-  //    <li>{person}</li>
-  //   );
-  // return <ul>{listItems}</ul>;
-
-
 
 
   return (
@@ -93,8 +85,8 @@ const Header = () => {
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
-              {<a onClick={handleClick} href="#projects-section">Projects</a>}
-              {<a onClick={handleClick} href="#contactme-section">Contact Me</a>}
+              {<a class="navIcons" onClick={handleClick} href="#projects-section" >Projects</a>}
+              {<a class="navIcons" onClick={handleClick} href="#contactme-section">Contact Me</a>}
             </HStack>
           </nav>
         </HStack>
