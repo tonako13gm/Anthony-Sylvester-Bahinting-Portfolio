@@ -87,14 +87,14 @@ const Header = () => {
           <nav>
             {/* Add social media links based on the `socials` data */}
             <HStack spacing={9}>
-
               <Navigation data={socials} />
-                
             </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
+              {<a onClick={handleClick} href="#projects-section">Projects</a>}
+              {<a onClick={handleClick} href="#contactme-section">Contact Me</a>}
             </HStack>
           </nav>
         </HStack>
