@@ -29,11 +29,13 @@ const LandingSection = () => {
       type: '',
       Comment: '',
     },
-    onSubmit: (values, submit) => {},
+    onSubmit: (values) => {
+      submit("", values);
+    },
     validationSchema: Yup.object({
       firstName: Yup.string()
         .min(5, 'Must be minimum of 5 characters')
-        .max(15, 'Must be 15 characters or less')
+        .max(30, 'Must be 15 characters or less')
         .required('Required'),
       email: Yup.string()
         .email('Invalid email address')
@@ -41,14 +43,21 @@ const LandingSection = () => {
       type: Yup.string()
         .required('Please select an option'),
       comment: Yup.string()
-        .min(20, 'Minimum of 50 characters')
+        .min(10, 'Tell me more')
         .max(10000)
         .required('Tell me something')
     }),
   });
 
-  console.log(formik)
-
+    // Show an alert when the form is submitted successfully
+    useEffect(() => {
+      if (response) {
+        onOpen(response.type, response.message);
+        // Reset the form if the response is successful
+        if (response.type === "success")
+          formik.resetForm();
+      }
+    }, [response]);
 
   return (
     <FullScreenSection
@@ -62,7 +71,7 @@ const LandingSection = () => {
           Contact me
         </Heading>
         <Box p={6} rounded="md" w="100%">
-          <form>
+          <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
                 <FormLabel htmlFor="firstName">Name</FormLabel>
@@ -108,7 +117,12 @@ const LandingSection = () => {
                 />
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="purple" width="full">
+              <Button 
+                type="submit" 
+                colorScheme="purple" 
+                width="full"
+                isLoading={isLoading}
+              >
                 Submit
               </Button>
             </VStack>
