@@ -27,7 +27,7 @@ const LandingSection = () => {
       firstName: '',
       email: '',
       type: '',
-      Comment: '',
+      comment: '',
     },
     onSubmit: (values) => {
       submit("", values);
