@@ -19,7 +19,7 @@ const CardView = ({ title, description, imageSrc }) => {
             {description}
           </Text>
           <Text>
-            <a href="#">
+            <a className="linkProjects" href="#" >
               see more <FontAwesomeIcon icon={faArrowRight} size="1x" />
             </a>
           </Text>
