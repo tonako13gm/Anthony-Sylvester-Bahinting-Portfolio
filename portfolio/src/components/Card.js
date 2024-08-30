@@ -1,7 +1,7 @@
-import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Heading, Image, Text } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { Card, CardHeader, CardBody, Stack } from '@chakra-ui/react'
+import { Card, CardBody, Stack } from '@chakra-ui/react'
 
 import React from "react";
 
@@ -12,14 +12,16 @@ const CardView = ({ title, description, imageSrc }) => {
   return (
     <Card>
       <CardBody>
-        <Image src={imageSrc} />
+        <a href="https://little-lemon-restaurant-booking-page.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <Image src={imageSrc} />
+        </a>
         <Stack mt='6' spacing='3'>
           <Heading size='md'>{title}</Heading>
           <Text>
             {description}
           </Text>
           <Text>
-            <a className="linkProjects" href="#" >
+            <a href="https://little-lemon-restaurant-booking-page.vercel.app/" target="_blank" rel="noopener noreferrer">
               see more <FontAwesomeIcon icon={faArrowRight} size="1x" />
             </a>
           </Text>

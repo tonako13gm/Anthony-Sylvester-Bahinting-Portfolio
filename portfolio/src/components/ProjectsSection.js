@@ -5,9 +5,9 @@ import CardView from "./Card";
 
 const projects = [
   {
-    title: "React Space",
+    title: "Little Lemon",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
     getImageSrc: () => require("../images/photo1.jpg"),
   },
   {

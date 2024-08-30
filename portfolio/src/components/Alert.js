@@ -13,13 +13,13 @@ import { useRef } from "react";
  */
 function Alert() {
   const { isOpen, type, message, onClose } = useAlertContext();
-  const cancelRef = useRef();
+  // const cancelRef = useRef();
   const isSuccess = type === "success"
 
   return (
     <AlertDialog
       isOpen={isOpen}
-      leastDestructiveRef={cancelRef}
+      // leastDestructiveRef={cancelRef}
       onClose={onClose}
     >
       <AlertDialogOverlay>

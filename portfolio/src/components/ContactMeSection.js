@@ -51,6 +51,7 @@ const LandingSection = () => {
 
     // Show an alert when the form is submitted successfully
     useEffect(() => {
+      console.log(onOpen)
       if (response) {
         onOpen(response.type, response.message);
         // Reset the form if the response is successful
@@ -122,6 +123,7 @@ const LandingSection = () => {
                 colorScheme="purple" 
                 width="full"
                 isLoading={isLoading}
+                // isDisabled={!(formik.isValid && formik.dirty)}
               >
                 Submit
               </Button>
