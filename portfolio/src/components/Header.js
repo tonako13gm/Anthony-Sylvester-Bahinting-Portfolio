@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -7,8 +6,7 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
-import { px } from "framer-motion";
+import { Box, HStack, Stack } from "@chakra-ui/react";
 
 const socials = [
   {
@@ -37,7 +35,7 @@ function Navigation(props) {
   const navList = props.data.map(navItem =>
     <li class="navIcons">
       <a href={navItem.url} target="_blank">
-        <FontAwesomeIcon icon={navItem.icon} size="2x" />
+        <FontAwesomeIcon icon={navItem.icon} size='2x'/>
       </a>
     </li>
   );
@@ -72,15 +70,16 @@ const Header = () => {
       zIndex="10000"
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
-        <HStack
+        <Stack
+          direction={{ base:'column', md:'row'}}
           px={16}
-          py={4}
-          justifyContent="space-between"
-          alignItems="center"
+          py={{base:'6', md:'4'}}
+          justifyContent={{base:'flex-end', md:'space-between'}}
+          alignItems={{base:'center'}}
         >
           <nav>
             {/* Add social media links based on the `socials` data */}
-            <HStack spacing={9}>
+            <HStack spacing={9} pb={{base:'4', md:'0'}}>
               <Navigation data={socials} />
             </HStack>
           </nav>
@@ -91,7 +90,7 @@ const Header = () => {
               {<a class="navIcons" onClick={handleClick} href="#contactme-section">Contact Me</a>}
             </HStack>
           </nav>
-        </HStack>
+        </Stack>
       </Box>
     </Box>
   );

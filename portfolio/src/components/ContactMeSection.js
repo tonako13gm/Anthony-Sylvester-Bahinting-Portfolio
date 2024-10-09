@@ -16,7 +16,6 @@ import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
-import { complex } from "framer-motion";
 
 const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
@@ -67,7 +66,7 @@ const LandingSection = () => {
       py={16}
       spacing={8}
     >
-      <VStack w="1024px" p={32} alignItems="flex-start">
+      <VStack p={1} alignItems="flex-start" width={{base:'90vw', md:'80vw', lg:'60vw'}}>
         <Heading as="h1" id="contactme-section">
           Contact me
         </Heading>
