@@ -7,18 +7,19 @@ import Footer from "./components/Footer";
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 import './App.css';
+import { Container } from '@chakra-ui/react'
 
 function App() {
   return (
     <ChakraProvider>
       <AlertProvider>
         <main>
-          <Header />
-          <LandingSection />
-          <ProjectsSection />
-          <ContactMeSection />
-          <Footer />
-          <Alert />
+            <Header />
+            <LandingSection />
+            <ProjectsSection />
+            <ContactMeSection />
+            <Footer />
+            <Alert />
         </main>
       </AlertProvider>
     </ChakraProvider>

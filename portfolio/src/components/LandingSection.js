@@ -22,10 +22,10 @@ const LandingSection = () => (
         <Heading as='h1' size='1xl' noOfLines={1}>
           {greeting}
         </Heading>
-        <Heading as='h1' size='3xl' noOfLines={1}>
+        <Heading as='h1' size={{base:'2xl', md:'3xl'}} noOfLines={1}>
           {bio1}
         </Heading>
-        <Heading as='h1' size='3xl' noOfLines={1}>
+        <Heading as='h1' size={{base:'2xl', md:'3xl'}} noOfLines={1}>
           {bio2}
         </Heading>
       </VStack>
