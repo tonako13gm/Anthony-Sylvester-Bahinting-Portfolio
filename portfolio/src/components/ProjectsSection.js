@@ -6,24 +6,28 @@ import CardView from "./Card";
 const projects = [
   {
     title: "Little Lemon",
+    path: "https://little-lemon-restaurant-booking-page.vercel.app/",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
     getImageSrc: () => require("../images/photo1.jpg"),
   },
   {
-    title: "React Infinite Scroll",
+    title: "Note Board",
+    path: "https://little-lemon-restaurant-booking-page.vercel.app/",
     description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
+      "A simple web application to track notes in a organized manner",
     getImageSrc: () => require("../images/photo2.jpg"),
   },
   {
     title: "Photo Gallery",
+    path: "https://little-lemon-restaurant-booking-page.vercel.app/",
     description:
       "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
     getImageSrc: () => require("../images/photo3.jpg"),
   },
   {
     title: "Event planner",
+    path: "https://little-lemon-restaurant-booking-page.vercel.app/",
     description:
       "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
     getImageSrc: () => require("../images/photo4.jpg"),
@@ -51,6 +55,7 @@ const ProjectsSection = () => {
           <CardView
             key={project.title}
             title={project.title}
+            link={project.path}
             description={project.description}
             imageSrc={project.getImageSrc()}
           />
