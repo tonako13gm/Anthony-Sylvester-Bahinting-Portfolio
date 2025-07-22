@@ -20,6 +20,7 @@ function App() {
             <ContactMeSection />
             <Footer />
             <Alert />
+            TEST
         </main>
       </AlertProvider>
     </ChakraProvider>

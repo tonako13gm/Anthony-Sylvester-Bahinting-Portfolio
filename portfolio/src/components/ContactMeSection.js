@@ -21,6 +21,23 @@ const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
 
+  // Function to send email via POST request
+  const sendEmail = async (values) => {
+    try {
+      const res = await fetch('https://your-email-api-endpoint.com/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+      const data = await res.json();
+      return data;
+    } catch (error) {
+      return { type: 'error', message: 'Failed to send email.' };
+    }
+  };
+
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -100,10 +117,10 @@ const LandingSection = () => {
                   name="type"
                   {...formik.getFieldProps('type')}
                 >
-                    <option value=""></option>
-                    <option value="hireMe">Freelance project proposal</option>
-                    <option value="openSource">Open source consultancy session</option>
-                    <option value="other">Other</option> 
+                    <option value="" style={{ color: 'black' }}></option>
+                    <option value="hireMe" style={{ color: 'black' }}>Freelance project proposal</option>
+                    <option value="openSource" style={{ color: 'black' }}>Open source consultancy session</option>
+                    <option value="other" style={{ color: 'black' }}>Other</option>
                 </Select>
                 <FormErrorMessage>{formik.errors.type}</FormErrorMessage>
               </FormControl>
