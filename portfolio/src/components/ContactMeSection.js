@@ -21,23 +21,6 @@ const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
 
-  // Function to send email via POST request
-  const sendEmail = async (values) => {
-    try {
-      const res = await fetch('https://your-email-api-endpoint.com/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      });
-      const data = await res.json();
-      return data;
-    } catch (error) {
-      return { type: 'error', message: 'Failed to send email.' };
-    }
-  };
-
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -88,7 +71,7 @@ const LandingSection = () => {
           Contact me
         </Heading>
         <Box p={6} rounded="md" w="100%">
-          <form onSubmit={formik.handleSubmit}>
+          <form action="https://tonako13.app.n8n.cloud/webhook/74165cd9-b9b9-429c-99a9-d2e23d3e1112" method="post">
             <VStack spacing={4}>
               <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
                 <FormLabel htmlFor="firstName">Name</FormLabel>
