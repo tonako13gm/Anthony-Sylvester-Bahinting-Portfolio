@@ -103,7 +103,7 @@ const LandingSection = () => {
                     <option value="" style={{ color: 'black' }}></option>
                     <option value="hireMe" style={{ color: 'black' }}>Freelance project proposal</option>
                     <option value="openSource" style={{ color: 'black' }}>Open source consultancy session</option>
-                    <option value="other" style={{ color: 'black' }}>Other</option>
+                    <opgittion value="other" style={{ color: 'black' }}>Other</opgittion>
                 </Select>
                 <FormErrorMessage>{formik.errors.type}</FormErrorMessage>
               </FormControl>
