@@ -55,7 +55,7 @@ const ProjectsSection = () => {
           <CardView
             key={project.title}
             title={project.title}
-            link={project.path}
+            link={project.link}
             description={project.description}
             imageSrc={project.getImageSrc()}
           />
