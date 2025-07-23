@@ -12,7 +12,7 @@ const projects = [
     getImageSrc: () => require("../images/photo1.jpg"),
   },
   {
-    title: "RNote Board",
+    title: "Note Board",
     description:
       "An easy to use web app where you can manage your task anywhere you want",
     link: "https://noteboard-6q4w.onrender.com/",
