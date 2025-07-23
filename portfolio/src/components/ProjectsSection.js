@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Note Board",
-    link: "https://little-lemon-restaurant-booking-page.vercel.app/",
+    link: "https://noteboard-6q4w.onrender.com/",
     description:
       "A simple web application to track notes in a organized manner",
     getImageSrc: () => require("../images/photo2.jpg"),
