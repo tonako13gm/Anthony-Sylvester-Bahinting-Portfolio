@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Note Board",
-    link: "https://noteboard-6q4w.onrender.com/",
+    link: "https://noteboard-5j25.onrender.com/",
     description:
       "A simple web application to track notes in a organized manner",
     getImageSrc: () => require("../images/photo2.jpg"),
