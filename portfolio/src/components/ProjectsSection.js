@@ -19,15 +19,15 @@ const projects = [
     getImageSrc: () => require("../images/photo2.jpg"),
   },
   {
-    title: "Photo Gallery",
-    link: "https://little-lemon-restaurant-booking-page.vercel.app/",
+    title: "Audiophile",
+    link: "https://audiophile-eight-sable.vercel.app/",
     description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
+      "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
     getImageSrc: () => require("../images/photo3.jpg"),
   },
   {
     title: "Event planner",
-    link: "https://little-lemon-restaurant-booking-page.vercel.app/",
+    link: "#",
     description:
       "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
     getImageSrc: () => require("../images/photo4.jpg"),
